@@ -1,0 +1,16 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - paulnak</title>
+        {% else %}
+        <title>paulnak</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            paulnak:
+            <a href="{{ url_for('index') }}">Home</a>
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>
