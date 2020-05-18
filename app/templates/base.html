@@ -7,9 +7,20 @@
         {% endif %}
     </head>
     <body>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {%  endif %}
+        {% endwith %}
         <div>
-            paulnak:
             <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('blogs') }}">Blogs</a>
+            <a href="{{ url_for('potw') }}">POTW</a>
+            <a href="{{ url_for('resume') }}">Resume</a>
         </div>
         {% block content %}{% endblock %}
     </body>
