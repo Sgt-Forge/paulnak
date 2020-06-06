@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         {% if title %}
@@ -5,22 +6,30 @@
         {% else %}
         <title>paulnak</title>
         {% endif %}
+
+        <style>
+            a{text-decoration:none;color:white;}a:hover{color:black;}body{background-color:#e30022;font-family:Arial, Helvetica, sans-serif;font-size:1rem;}ul{list-style-type:none;margin:0;padding:0;}
+            .navbar{display:flex;max-width:1200px;margin:auto;background-color:black;color:white;justify-content:center;border-radius:10px;}.navbar-list{display:flex;flex-wrap:wrap;width:100%;height:40px;max-width:720px;justify-content:space-around;}.nav-item{display:flex;margin:auto;padding:0 10px;background-color:black;}.nav-item:hover{background-color:white;}.nav-content{display:flex;overflow:hidden;}
+        </style>
+        <link rel="preload" href="static/css/non-critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet href="static/css/non-critical.css"></noscript>
     </head>
     <body>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {%  endif %}
-        {% endwith %}
-        <div>
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('blogs') }}">Blogs</a>
-            <a href="{{ url_for('potw') }}">POTW</a>
-            <a href="{{ url_for('resume') }}">Resume</a>
+        <div class="navbar">
+            <ul class="navbar-list">
+                <li class="nav-item">
+                    <a href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('blogs') }}">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('potw') }}">POTW</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('resume') }}">Resume</a>
+                </li>
+            </ul>
         </div>
         {% block content %}{% endblock %}
     </body>
