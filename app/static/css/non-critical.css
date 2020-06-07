@@ -1,0 +1,26 @@
+.bio{
+    position: relative;
+    display: flex;
+    max-width: 980px;
+    margin: auto;
+    top: 100px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 2px 2px darkgrey;
+}
+
+.bio-img{
+    display: flex;
+    max-width: 50%;
+}
+
+img.bio-img{
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.bio-content{
+    display: inline;
+    margin: auto 20px;
+}
