@@ -1,60 +1,137 @@
-a{
-    height:100%;
-    text-decoration:none;
-    color:white;
-}
-
-a:hover{
-    background-color:white;
-    color:black;
-}
-
 body{
-    background-color:#D7C6AB    ;
-    font-family:Arial, Helvetica, sans-serif;
+    background-color:#191919;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size:1rem;
 }
 
-ul{
-    list-style-type:none;
+h1,h2,h3,h4,h5,h6 {
+    color: whitesmoke;
 }
 
-/*=============================================================
-                      Class Items                             
-=============================================================*/
-
-/*=============================================================
-                      Navbar                             
-=============================================================*/
-
-.navbar{display:flex;max-width:1200px;margin:auto;background-color:black;color:white;justify-content:center;border-radius:10px;}.navbar-list{display:flex;flex-wrap:wrap;width:100%;max-width:720px;justify-content:space-around;}.nav-item{height:100%;display:flex;background-color:black;justify-content:center;}
-
-/*=============================================================
-                      Bio
-=============================================================*/
-.bio{
-    position: relative;
+li {
     display: flex;
-    max-width: 980px;
+    margin: 0.5rem;
+}
+
+svg {
     margin: auto;
-    top: 100px;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 2px 2px darkgrey;
 }
 
-.bio-img{
+ul{
+    list-style: none;
     display: flex;
-    max-width: 50%;
-}
-
-img.bio-img{
+    font-size: 0;
+    list-style: none;
+    text-align: right;
     max-width: 100%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    justify-items: right;
+    padding: 0;
 }
 
-.bio-content{
-    display: inline;
-    margin: auto 20px;
+.border{
+    background-color: whitesmoke;
+    width: 100%;
+    height: .175rem;
+}
+
+.button {
+    width:46px;
+    height:46px;
+}
+
+.card{
+    position:relative;
+    display:flex;
+    border-radius:10px;
+    max-width:700px;
+}
+
+.col {
+    display: block;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 90%;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.profile-pic{
+    margin:auto 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px auto;
+}
+
+.slide-left {
+    animation: slide-left-slow 1s;
+}
+.slide-left-slow {
+    animation: slide-left-slow 2s;
+}
+
+.theme{
+    color: red;
+}
+
+.title {
+    font-size: 5rem!important;
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+@keyframes slide-left-slow {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+#icon{
+    display: flex;
+    max-width: 100px;
+}
+
+/*  ================================================
+    SMALL
+    ================================================
+*/  
+
+@media screen and (max-width: 768px){
+
+    .col-sm-12 {
+        width: 100%;
+    }
+
+}
+
+/*  ================================================
+    MEDIUM
+    ================================================
+*/  
+
+@media screen and (min-width: 768px){
+
+    .col-md-12 {
+        width: 100%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-4 {
+        width: 33.33%;
+    }
 }
