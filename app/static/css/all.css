@@ -6,6 +6,8 @@ body{
 
 h1,h2,h3,h4,h5,h6 {
     color: whitesmoke;
+    margin: 0;
+    font-weight: unset;
 }
 
 li {
@@ -39,13 +41,6 @@ ul{
     height:46px;
 }
 
-.card{
-    position:relative;
-    display:flex;
-    border-radius:10px;
-    max-width:700px;
-}
-
 .col {
     display: block;
 }
@@ -73,20 +68,21 @@ ul{
 }
 
 .slide-left {
-    animation: slide-left-slow 1s;
+    animation: slide-left-slow 2s;
 }
 .slide-left-slow {
-    animation: slide-left-slow 2s;
+    animation: slide-left-slow 3s;
 }
 
 .theme{
     color: red;
+    margin: auto 0;
 }
 
 .title {
-    font-size: 5rem!important;
-    font-weight: 400;
+    font-size: 5rem;
     color: whitesmoke;
+    max-width: 300px;
 }
 
 @keyframes slide-left-slow {
@@ -100,6 +96,11 @@ ul{
     }
 }
 
+.topic {
+    border-left: 1px solid red;
+    padding-left: 1em;
+}
+
 #icon{
     display: flex;
     max-width: 100px;
@@ -111,7 +112,14 @@ ul{
 */  
 
 @media screen and (max-width: 768px){
-
+    .name {
+        margin: auto 0;
+    }
+    .title {
+        font-size: 2rem;
+        color: whitesmoke;
+        max-width: 150px;
+    }
     .col-sm-12 {
         width: 100%;
     }
