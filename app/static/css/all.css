@@ -15,9 +15,27 @@ li {
     margin: 0.5rem;
 }
 
+li path{
+    fill: whitesmoke;
+}
+
+li:hover path{
+    fill: red;
+}
+
+p {
+    color: whitesmoke;
+    margin: 0;
+}
+
 svg {
     margin: auto;
+    stroke:#fff;
 }
+svg:hover {
+    stroke: red;
+}
+
 
 ul{
     list-style: none;
