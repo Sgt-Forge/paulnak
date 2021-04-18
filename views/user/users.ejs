@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs") %>
+    <h1>Users: <%= users.length %> </h1>
+    <h3><%= users[0].username %></h3>
+    <% users.forEach(function(user) { %>
+     <h3><%= user.username %></h3>
+    <% }) %>
+</html>
