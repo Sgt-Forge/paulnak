@@ -5,7 +5,7 @@ const path = require('path');
 
 const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
-mongoose.connect('mongodb://mongo:27017/paulnak', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/paulnak', {useNewUrlParser: true, useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('err', console.error.bind(console, 'Mongoose connection error:'));
 

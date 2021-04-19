@@ -7,14 +7,10 @@ const userController = {
     },
 
     register (req, res) {
-        User.find({}).then((users) => {
-            var newUser = new User({
-                email: 'test' + users.length, 
-                username: 'test' + users.length
-            });
-            newUser.save();
-            res.render('user/register', {user: newUser});
-        });
+        if (req.method == "POST"){
+
+        }
+        res.render('user/register');
     },
 
     users (req, res) {

@@ -2,5 +2,12 @@
 <html lang="en">
     <%- include("../partials/head.ejs") %>
     <h1>Register</h1>
-    <h3><%= user.username %> </h3>
+    <form method="POST" action="">
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email">
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username">
+        <label for="password">password</label><br>
+        <input type="text" id="password" name="password">
+    </form>
 </html>
